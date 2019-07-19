@@ -1,0 +1,56 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CTO Web App</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <script type = "text/javascript" src = "{{ url_for('static', filename='index.js') }}"></script>
+    </head>
+    <body onload="main()">
+        <div class = "content">
+            <table class = "main-block">
+                <tr>
+                    <td><img class = "car-image" src = "{{url_for('static', filename = filename )}}"></td>
+                    
+                    <td class = "check-block">
+                        <label class = "check-label"> Проверка ЕРАП:</label>
+                        <div class = "status">Статус:
+                            <div class = "hash">
+                                <label class = "first-two-chars"></label>
+                                <div class = "random-colors">
+                                    <span class = "hash-hover">{{hash_key}}</span>
+                                </div>
+                                <label class = "last-two-chars"></label>
+                                
+                                
+                            </div> 
+                            <label class = "status-text">
+                                Не проверен
+                            </label>
+                        </div>
+                        <label class = "check-label"> Проверка ЦТО:</label>
+                        <div class = "status">Статус:
+                            <div class = "hash">
+                                <label class = "first-two-chars"></label>
+                                <div class = "random-colors">
+                                    <span class = "hash-hover">{{hash_key}}</span>
+                                </div>
+                                <label class = "last-two-chars"></label>
+                                
+                                
+                            </div> 
+                            <label class = "status-text">
+                                Не проверен
+                            </label>
+                        </div>
+                        
+                    </td>
+                </tr>
+            </table>
+            <form method = post>
+                <button class = "action-button shadow animate blue" method = post>Проверить</button>    
+            </form>
+        </div>
+    </body>
+</html>

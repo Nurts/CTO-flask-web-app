@@ -1,0 +1,155 @@
+body{
+    background-color: rgb(143, 143, 143);
+}
+.content{
+    padding: 20px;
+    width: 700px;
+    height: 300px;
+    margin: auto;
+    margin-top: 5%;
+    background-color: white;
+    border-radius: 10px;
+}
+.status{
+    box-shadow: 2px 2px gray;
+    margin-top: 10px;
+    margin-bottom: 10%;
+    background-color: rgb(143, 143, 143);
+    margin-left: 10%;
+    border-radius: 10px;
+    padding: 10px;
+    
+}
+.check-label{
+    margin-top: 20px;
+    font-size: 13pt;
+}
+.check-block{
+    padding-left: 5%;
+    width : 63%;
+}
+.ishidden{
+    visibility: hidden;
+}
+.car-image {
+    padding: 0%;
+    margin: 0%;
+    height: 250px;
+    width: 250px;
+}
+
+.hash{
+    padding-left: 3ch;
+    display: inline-block;
+    color: #404040;
+}
+
+.hash-hover{
+    visibility: hidden;
+    background-color: rgb(59, 58, 58);
+    color: white; 
+    text-align: center;
+    position: absolute;
+    font-size: 8pt;
+    z-index: 1;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 1.5%;
+}
+
+.random-colors{
+    display: inline-block;
+    height: 100%;
+    margin-bottom: -10pt;
+}
+
+.random-colors:hover .hash-hover{
+    visibility: visible;
+}
+
+.status-text{
+    text-align: right;
+    padding-left: 3ch;
+    display: inline-block;
+}
+
+input[type="text"] {
+    box-sizing: border-box;
+    width: 100%;
+    height: calc(3em + 2px);
+    margin: 0 0 1em;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1.5em;
+    background: #fff;
+    resize: none;
+    outline: none;
+}
+input[type="text"][required]:focus {
+    border-color: #00bafa;      
+}
+input[type="text"][required]:focus + label[placeholder]:before {
+    color: #00bafa; 
+}
+input[type="text"][required]:focus + label[placeholder]:before,
+input[type="text"][required]:valid + label[placeholder]:before {
+    transition-duration: 0.2s;
+    -webkit-transform: translate(0, -1.5em) scale(0.9, 0.9);
+            transform: translate(0, -1.5em) scale(0.9, 0.9);
+}
+input[type="text"][required]:invalid + label[placeholder][alt]:before {
+    content: attr(alt); 
+}
+input[type="text"][required] + label[placeholder] {
+    display: block;
+    pointer-events: none;
+    line-height: 1.25em;
+    margin-top: calc(-3em - 2px);
+    margin-bottom: calc((3em - 1em) + 2px);
+}
+input[type="text"][required] + label[placeholder]:before {
+    content: attr(placeholder);
+    display: inline-block;
+    margin: 0 calc(1em + 2px);
+    padding: 0 2px;
+    color: #898989;
+    white-space: nowrap;
+    transition: 0.3s ease-in-out;
+    background-image: linear-gradient(to bottom, #fff, #fff);
+    background-size: 100% 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.animate{
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+}
+.action-button{
+    position: relative;
+    padding: 10px 40px;
+    margin: 0px 10px 10px 0px;
+    border-radius: 10px;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: #FFF;
+    text-decoration: none; 
+    float: right;
+}
+.blue{
+    background-color: #3498db;
+    border-bottom: 5px solid #2980B9;
+    text-shadow: 0px -2px #2980B9;
+}
+.action-button:active{
+    transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+}
+
+.error-block{
+    width: 100%;
+    background-color: #ff5252;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+}
