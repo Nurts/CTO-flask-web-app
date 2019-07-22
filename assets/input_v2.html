@@ -1,0 +1,74 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CTO Web App</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style-v2.css') }}">
+        <script type = "text/javascript" src = "{{ url_for('static', filename='js/index-v2.js') }}"></script>
+        
+    </head>
+    <body onload='main("{{status}}", {{hide}})'>
+        <div class = "content" id = "content-block">
+            <table class = "main-block">
+                <tr>
+                    <td><img class = "car-image" src = "{{url_for('static', filename = filename )}}"></td>
+                    
+                    <td class = "check-block">
+                        
+                        <form method = post>
+                            <input name = "plate_id" required='' type='text'>
+                            <label alt='Номер Машины' placeholder='Номер Машины'></label>
+                            <input name  = "iin" required='' type='text'>
+                            <label alt='ИИН' placeholder='ИИН'></label>
+                            <button class = "action-button shadow animate blue" method = post>Проверить</button>    
+                        </form>
+                        
+                    </td>
+                </tr>
+            </table>
+            <div class = "ishidden check-block" id = "hash-block">
+                Статус:
+                <div class = "status-block">
+                    
+                    <div class = "status-var">
+                        <div id =  "status-label">Законапослушный автоводитель. Нарушений не имеется </div>
+                        
+                        <img class = "ishidden" id = "status-icon-2" src = "{{ url_for('static', filename='images/small_crossed.png') }}">
+                        <img id = "status-icon-1" src = "{{ url_for('static', filename='images/small_crossed.png') }}">
+                    </div>
+                    
+                    
+                </div>
+
+                <div class = "hash-code-block">
+                    <div class = "status">
+                        <label class = "check-label"> HASH-код, рассчитанный от введенной информаций:</label>
+                        <div class = "hash">
+                            <label class = "first-two-chars"></label>
+                            <div class = "random-colors">
+                                <span class = "hash-hover">{{new_hash_key}}</span>
+                            </div>
+                            <label class = "last-two-chars"></label>
+                            
+                            
+                        </div> 
+                    </div>
+                    
+                    <div class = "status">
+                        <label class = "check-label"> HASH-код из государственной блокчейн платформы:</label>
+                        <div class = "hash">
+                            <label class = "first-two-chars"></label>
+                            <div class = "random-colors">
+                                <span class = "hash-hover">{{hash_key}}</span>
+                            </div>
+                            <label class = "last-two-chars"></label>
+                            
+                            
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
